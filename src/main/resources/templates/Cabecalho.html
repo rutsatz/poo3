@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	
+	<nav class="navbar  navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cabecalho-navbar-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<p class="navbar-brand">
+					<a href="#">
+<!-- 						<img alt="UNISC" th:src="@{/images/logo.png}" height="35px"/> -->
+					</a>
+				
+					Reconhecedor
+				</p>
+
+			</div>
+			<div class="collapse navbar-collapse" id="cabecalho-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li th:classappend="${#httpServletRequest.getRequestURI() == '/status' ? 'active' : ''}"><a th:href="@{/status}">Status<span class="sr-only">(current)</span></a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>
+	
+</html>

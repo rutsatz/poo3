@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="LayoutPadrao">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<section layout:fragment="conteudo">
+
+	<div class="container">
+		<div class="page-header" id="banner">
+			<div class="row">
+				<div class="col-lg-8 col-md-7 col-sm-6">
+				<h1>Ops! Ocorreu um erro!</h1>
+<!-- 					<h1 th:text="#{error.page.title}">[error title]</h1> -->
+
+<!-- 					<p class="lead"> -->
+<!-- 						Erro encontrado em <span th:text="${timestamp}"></span> -->
+<!-- 					</p> -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="container bs-container">
+		<div class="row">
+			<div class="container">
+				<h3>Detalhes do erro</h3>
+
+				<p>
+				<div th:unless="${status == null}">
+					<span style="font-weight: bold">HTTP Status: </span><span
+						th:text="${status}" ></span> (<span th:text="${error}" ></span>)
+				</div>
+				<div th:unless="${message == null}">
+					<span style="font-weight: bold">Message: </span><span
+						th:text="${message}" ></span>
+				</div>
+
+				<div th:unless="${exception == null}">
+					<span style="font-weight: bold">Exception: </span><span
+						th:text="${exception}" ></span>
+				</div>
+				<p></p>
+				<p>
+					Clique aqui para voltar a <a th:href="@{/}">Página Inicial</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+</html>
