@@ -248,7 +248,7 @@ public class TwitterIntegration {
 			};
 			twitterStream = new TwitterStreamFactory().getInstance();
 			twitterStream.addListener(listener);
-			twitterStream.user();
+//			twitterStream.user();
 			 
 
 		} catch (Exception e) {
