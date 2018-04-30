@@ -28,7 +28,7 @@ public class TwitterController {
 	public ResponseEntity<Object> consultar() {
 		try {
 			// String msg =
-			twitterService.postar();
+			twitterService.post("Teste");
 			return new ResponseEntity<Object>("ok", HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
