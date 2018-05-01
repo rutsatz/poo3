@@ -50,7 +50,7 @@ public class TwitterIntegration {
 
 			builder.setOAuthConsumerKey(CONSUMER_KEY);
 			builder.setOAuthConsumerSecret(CONSUMER_SECRET);
-
+			
 			configuration = builder.build();
 
 			factory = new TwitterFactory(configuration);
@@ -262,6 +262,7 @@ public class TwitterIntegration {
 
 		// Twitter sender = TwitterFactory.getSingleton();
 		DirectMessage message = twitter.sendDirectMessage(recipientId, text);
+		
 		System.out.println("Sent: " + message.getText() + " to @" + message.getRecipientScreenName());
 
 	}
