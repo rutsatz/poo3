@@ -40,12 +40,12 @@ public class TwitterService {
 	private String trataComandos(String comando) {
 		int maxResults = 3;
 		if (comando.contains("\\help")) {
-			return "Lista de comandos: \n" + "\\help \n" + "\\salario_minimo";
+			return "Lista de comandos: \n" + "\\help \n" + "salario_minimo \n arrecadacao_estado";
 
-		} else if (comando.contains("\\salario_minimo")) {
+		} else if (comando.contains("salario_minimo")) {
 			return new SalarioMinimo().getLastYears(maxResults); // Últimos 10 registros.
 
-		} else if (comando.contains("\\arrecadacao_estado")) {
+		} else if (comando.contains("arrecadacao_estado")) {
 			return new ArrecadacaoEstado().getLastArrecadations(maxResults); // Últimos 10 registros.
 
 		}
